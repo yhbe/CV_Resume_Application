@@ -1,24 +1,7 @@
 import React from "react";
 
 export default class Form extends React.Component {
-  state = JSON.parse(localStorage.getItem("todoForm")) || {
-    firstname: "",
-    lastname: "",
-    title: "",
-    address: "",
-    phonenumber: "",
-    description: "",
-  };
-
-  onChange = (event) => {
-    this.setState((prevState) => ({ [event.target.name]: event.target.value }));
-  };
-
-  componentDidUpdate() {
-    localStorage.setItem("todoForm", JSON.stringify(this.state));
-  }
-
-  render() {
+  render(props) {
     return (
       <div>
         <form className="application--form">
@@ -29,7 +12,7 @@ export default class Form extends React.Component {
               name="firstname"
               id="first--name"
               placeholder="First name"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
           <label htmlFor="lastname">
@@ -38,7 +21,7 @@ export default class Form extends React.Component {
               name="lastname"
               id="last--name"
               placeholder="Last name"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
           <label htmlFor="title">
@@ -47,7 +30,7 @@ export default class Form extends React.Component {
               name="title"
               id="title"
               placeholder="Title"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
           <label htmlFor="address">
@@ -56,7 +39,7 @@ export default class Form extends React.Component {
               name="address"
               id="address"
               placeholder="Address"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
           <label htmlFor="phonenumber">
@@ -65,7 +48,7 @@ export default class Form extends React.Component {
               name="phonenumber"
               id="phonenumber"
               placeholder="Phone number"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
           <label htmlFor="description">
@@ -74,7 +57,7 @@ export default class Form extends React.Component {
               name="description"
               id="form--description"
               placeholder="Description"
-              onChange={this.onChange}
+              onChange={this.props.onChange}
             />
           </label>
         </form>

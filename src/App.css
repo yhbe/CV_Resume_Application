@@ -31,3 +31,30 @@
   height: 100px;
   width: 100%;
 }
+
+.lower--container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.applicant--container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  min-height: 500px;
+  min-width: 500px;
+  background-color: rebeccapurple;
+  border-radius: 40px;
+}
+
+.profile--image{
+  width: 200px;
+  height: 200px;
+  border-radius: 250px;
+  object-fit: cover;
+  margin-top: 10px;
+}
