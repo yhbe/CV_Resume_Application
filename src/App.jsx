@@ -6,12 +6,13 @@ import React from "react";
 
 class App extends React.Component {
   state = JSON.parse(localStorage.getItem("todoForm")) || {
-    firstname: "",
-    lastname: "",
-    title: "",
-    address: "",
-    phonenumber: "",
-    description: "",
+    firstname: "Mr.",
+    lastname: "Rufus",
+    title: "Surgeon",
+    address: "1232 Dog Lane",
+    phonenumber: "#1241238429",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   };
 
   onChange = (event) => {

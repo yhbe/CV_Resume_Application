@@ -57,6 +57,7 @@ export default class Form extends React.Component {
               name="description"
               id="form--description"
               placeholder="Description"
+              maxLength={369}
               onChange={this.props.onChange}
             />
           </label>
