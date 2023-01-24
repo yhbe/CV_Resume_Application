@@ -10,10 +10,15 @@ class App extends React.Component {
     lastname: "Rufus",
     title: "Surgeon",
     address: "1232 Dog Lane",
-    phonenumber: "#1241238429",
+    phonenumber: "1241238429",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    edit: false,
   };
+
+  componentDidMount() {
+    this.setState((prevState) => ({ edit: false }));
+  }
 
   onChange = (event) => {
     this.setState((prevState) => ({ [event.target.name]: event.target.value }));
@@ -23,13 +28,19 @@ class App extends React.Component {
     localStorage.setItem("todoForm", JSON.stringify(this.state));
   }
 
+  handleEdit = () => {
+    this.setState((prevState) => ({
+      edit: !prevState.edit,
+    }));
+  };
+
   render() {
     return (
       <>
         <Header />
         <div className="lower--container">
-          <Form onChange={this.onChange} />
-          <Applicant state={this.state} />
+          <Form onChange={this.onChange} state={this.state} />
+          <Applicant state={this.state} changeEdit={this.handleEdit} />
         </div>
       </>
     );

@@ -13,6 +13,7 @@
   color: white;
   background-color: rgb(66, 63, 63);
   padding: 40px 20px;
+  box-shadow: 1px 5px 1px rgba(10, 10, 10, 0.753);
 }
 
 .application--form{
@@ -20,12 +21,14 @@
   padding: 30px;
   background-color: rgb(131, 129, 133);
   border-radius: 20px;
+  box-shadow: 1px 1px 0px rgba(17, 4, 4, 0.87);
 }
 
 .application--form > label > *{
   font-size: 1.2rem;
   margin: 3px 0px;
   text-indent: 3px;
+  box-shadow: 0px 0px 2px inset rgba(17, 4, 4, 0.87);
 }
 
 #form--description{
@@ -54,6 +57,7 @@
   background-color: rgb(131, 129, 133);
   padding: 20px;
   border-radius: 40px;
+  box-shadow: 1px 1px 0px rgba(17, 4, 4, 0.87);
 }
 
 .profile--image{
@@ -62,9 +66,22 @@
   border-radius: 250px;
   object-fit: cover;
   margin-top: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
 }
 
 .applicant--description{
   max-width: 300px;
   word-wrap: break-word;
+}
+
+.edit--button{
+  padding: 10px 30px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
+}
+
+.edit--button:active{
+  box-shadow: inset 1px 5px 5px black;
 }

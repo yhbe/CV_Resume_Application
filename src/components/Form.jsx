@@ -2,6 +2,26 @@ import React from "react";
 
 export default class Form extends React.Component {
   render(props) {
+    this.componentDidUpdate = () => {
+      if (this.props.state.edit === true) {
+        document.querySelector(
+          "#first--name"
+        ).value = `${this.props.state.firstname}`;
+        document.querySelector(
+          "#last--name"
+        ).value = `${this.props.state.lastname}`;
+        document.querySelector("#title").value = `${this.props.state.title}`;
+        document.querySelector(
+          "#address"
+        ).value = `${this.props.state.address}`;
+        document.querySelector(
+          "#phonenumber"
+        ).value = `${this.props.state.phonenumber}`;
+        document.querySelector(
+          "#form--description"
+        ).value = `${this.props.state.description}`;
+      }
+    };
     return (
       <div>
         <form className="application--form">

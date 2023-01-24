@@ -22,6 +22,11 @@ export default class Applicant extends Component {
           <p className="applicant--description">
             {this.props.state.description}
           </p>
+          {!this.props.state.edit && (
+            <button className="edit--button" onClick={this.props.changeEdit}>
+              EDIT
+            </button>
+          )}
         </div>
       </div>
     );
